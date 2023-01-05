@@ -27,6 +27,9 @@
   {% set _ = sdvars.update({"component": "main"}) %}
 {% endif %}
 
+# Expose build type via sdvars
+{% set _ = sdvars.update("buildtype": {{ d.environment }}) %}
+
 # Append repo URL with appropriate dom0 Fedora version
 {% set fedora_repo = "f32" %}
 {% set _ = sdvars.update({"distribution": "bullseye"}) %}

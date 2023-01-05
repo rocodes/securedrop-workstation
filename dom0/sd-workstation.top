@@ -50,6 +50,7 @@ base:
     - sd-mime-handling
   sd-devices-dvm:
     - sd-mime-handling
+    - sd-buildtype
   sd-proxy:
     - sd-proxy-files
     - sd-mime-handling

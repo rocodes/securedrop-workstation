@@ -58,3 +58,7 @@ sd-devices-create-named-dispvm:
         - sd-workstation
     - require:
       - qvm: sd-devices-dvm
+
+# Add sd-devices buildtype
+{% from 'sd-buildtype-macro.sls' import sd-buildtype with context %}
+sd-buildtype('sd-devices', {{ sdvars.buildtype }})
