@@ -9,6 +9,7 @@ base:
     - sd-dom0-systemd
     - sd-workstation-template
     - sd-upgrade-templates
+    - sd-sys-whonix-templates
     - sd-dom0-qvm-rpc
     - sd-sys-whonix-vms
     - sd-log

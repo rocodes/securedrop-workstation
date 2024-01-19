@@ -3,6 +3,7 @@
 
 include:
   - sd-upgrade-templates
+  - sd-sys-whonix-templates
 
 # The Qubes logic is too polite about enforcing template
 # settings, using "present" rather than "prefs". Below
@@ -11,12 +12,15 @@ sys-whonix-template-config:
   qvm.vm:
     - name: sys-whonix
     - prefs:
-      - template: whonix-gw-16
+      - template: whonix-gateway-17
     - require:
       - sls: sd-upgrade-templates
+      - sls: sd-sys-whonix-templates
 
 anon-whonix-template-config:
   qvm.vm:
     - name: anon-whonix
     - prefs:
-      - template: whonix-ws-16
+      - template: whonix-workstation-17
+    - require:
+      - sls: sd-sys-whonix-templates
