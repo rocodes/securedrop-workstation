@@ -67,7 +67,7 @@ class SetupWorker(QObject):
         """
         Runs provision-all to apply the salt state.highstate on dom0 and all VMs
         """
-        # TODO: make this separate scripts
+        # TODO: make this separate calls
 
         try:
             subprocess.check_call([os.path.join(SCRIPTS_PATH, "scripts/provision-all")])
@@ -160,6 +160,7 @@ class SetupWorker(QObject):
             self.state_changed.emit(ConfigStatus.APPLY_ERROR)
     
     def uninstall(self):
+        # TODO: not prod-supported
         try:
             print(
                 "Uninstalling will remove all packages and destroy all VMs associated\n"
@@ -169,5 +170,5 @@ class SetupWorker(QObject):
             self._refresh_salt()
             self._perform_uninstall()
         except SDWAdminException:
-            pass # we aren't supporting uninstall
+            pass # TODO: we aren't supporting uninstall but TODO
     

@@ -261,7 +261,6 @@ class DirectoryPickerPage(SetupWizardPage):
 
         # Directory
         storage_dir_form = QWidget()
-        storage_dir_form.setObjectName("QWizard_passphrase_form")
         storage_dir_form_layout = QVBoxLayout()
         storage_dir_form_layout.setContentsMargins(
             self.NO_MARGIN, self.NO_MARGIN, self.NO_MARGIN, self.NO_MARGIN
